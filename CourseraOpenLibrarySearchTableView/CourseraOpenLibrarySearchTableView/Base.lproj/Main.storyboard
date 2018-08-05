@@ -6,10 +6,11 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Root View Controller-->
+        <!--Searched Books-->
         <scene sceneID="Uj1-ui-ahy">
             <objects>
                 <tableViewController id="iBU-TZ-mba" customClass="TVC" customModule="CourseraOpenLibrarySearchTableView" customModuleProvider="target" sceneMemberID="viewController">
@@ -25,6 +26,9 @@
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="Lmo-m9-5We" kind="show" id="aNc-l8-hra"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -32,11 +36,82 @@
                             <outlet property="delegate" destination="iBU-TZ-mba" id="2b4-L5-Kh9"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="Lyd-0W-8cJ"/>
+                    <navigationItem key="navigationItem" title="Searched Books" id="Lyd-0W-8cJ"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kMG-Qz-NP1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="799" y="272"/>
+        </scene>
+        <!--Book Detail-->
+        <scene sceneID="JbM-vy-XXv">
+            <objects>
+                <viewController id="Lmo-m9-5We" customClass="BookDetail" customModule="CourseraOpenLibrarySearchTableView" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dS0-xi-uoc">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Titulo:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p78-R8-H8r">
+                                <rect key="frame" x="16" y="79" width="48" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Autor(es):" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2tn-hd-VvO">
+                                <rect key="frame" x="16" y="151" width="77" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Portada:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lqm-5D-NjQ">
+                                <rect key="frame" x="16" y="217" width="65" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Acz-Ht-yu4">
+                                <rect key="frame" x="16" y="113" width="288" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tQB-HR-3Ev">
+                                <rect key="frame" x="16" y="178" width="288" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ut2-qb-7dm">
+                                <rect key="frame" x="16" y="246" width="288" height="302"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="04R-Fo-m9m" firstAttribute="trailing" secondItem="Lqm-5D-NjQ" secondAttribute="trailing" constant="239" id="02N-OC-bhN"/>
+                            <constraint firstItem="04R-Fo-m9m" firstAttribute="trailing" secondItem="tQB-HR-3Ev" secondAttribute="trailing" constant="16" id="6wd-gh-Klb"/>
+                            <constraint firstItem="tQB-HR-3Ev" firstAttribute="top" secondItem="2tn-hd-VvO" secondAttribute="bottom" constant="6" id="9le-Zv-Of5"/>
+                            <constraint firstItem="04R-Fo-m9m" firstAttribute="trailing" secondItem="p78-R8-H8r" secondAttribute="trailing" constant="256" id="I6N-2X-KsS"/>
+                            <constraint firstItem="Lqm-5D-NjQ" firstAttribute="leading" secondItem="04R-Fo-m9m" secondAttribute="leading" constant="16" id="IMt-H1-APo"/>
+                            <constraint firstItem="p78-R8-H8r" firstAttribute="top" secondItem="04R-Fo-m9m" secondAttribute="top" constant="15" id="KMZ-7E-mWF"/>
+                            <constraint firstItem="Lqm-5D-NjQ" firstAttribute="top" secondItem="tQB-HR-3Ev" secondAttribute="bottom" constant="9" id="MXO-RT-uoh"/>
+                            <constraint firstItem="2tn-hd-VvO" firstAttribute="leading" secondItem="04R-Fo-m9m" secondAttribute="leading" constant="16" id="Qi6-XH-Ei0"/>
+                            <constraint firstItem="tQB-HR-3Ev" firstAttribute="leading" secondItem="04R-Fo-m9m" secondAttribute="leading" constant="16" id="Rcn-ar-oUg"/>
+                            <constraint firstItem="04R-Fo-m9m" firstAttribute="trailing" secondItem="Acz-Ht-yu4" secondAttribute="trailing" constant="16" id="T0r-kU-LBn"/>
+                            <constraint firstItem="Acz-Ht-yu4" firstAttribute="leading" secondItem="04R-Fo-m9m" secondAttribute="leading" constant="16" id="Y1U-Pq-1mG"/>
+                            <constraint firstItem="04R-Fo-m9m" firstAttribute="trailing" secondItem="ut2-qb-7dm" secondAttribute="trailing" constant="16" id="aSE-pW-cBo"/>
+                            <constraint firstItem="Acz-Ht-yu4" firstAttribute="top" secondItem="p78-R8-H8r" secondAttribute="bottom" constant="13" id="bdM-jh-9Ut"/>
+                            <constraint firstItem="2tn-hd-VvO" firstAttribute="top" secondItem="Acz-Ht-yu4" secondAttribute="bottom" constant="8" id="czO-xU-Q1x"/>
+                            <constraint firstItem="p78-R8-H8r" firstAttribute="leading" secondItem="04R-Fo-m9m" secondAttribute="leading" constant="16" id="ekR-TL-z5F"/>
+                            <constraint firstItem="04R-Fo-m9m" firstAttribute="trailing" secondItem="2tn-hd-VvO" secondAttribute="trailing" constant="227" id="nZI-Ig-3o3"/>
+                            <constraint firstItem="04R-Fo-m9m" firstAttribute="bottom" secondItem="ut2-qb-7dm" secondAttribute="bottom" constant="20" id="rbM-LZ-9zq"/>
+                            <constraint firstItem="ut2-qb-7dm" firstAttribute="top" secondItem="Lqm-5D-NjQ" secondAttribute="bottom" constant="8" id="u8y-Ab-2kf"/>
+                            <constraint firstItem="ut2-qb-7dm" firstAttribute="leading" secondItem="04R-Fo-m9m" secondAttribute="leading" constant="16" id="zNe-gj-yUg"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="04R-Fo-m9m"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7dN-e3-mE0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1884.375" y="269.36619718309862"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="xIW-cs-VS0">

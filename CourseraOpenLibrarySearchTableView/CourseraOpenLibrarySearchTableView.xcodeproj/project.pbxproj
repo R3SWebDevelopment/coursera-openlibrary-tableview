@@ -13,6 +13,7 @@
 		DFB92FBD2117B03C00695334 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFB92FBC2117B03C00695334 /* Assets.xcassets */; };
 		DFB92FC02117B03C00695334 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFB92FBE2117B03C00695334 /* LaunchScreen.storyboard */; };
 		DFB92FC82117B39000695334 /* TVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB92FC72117B39000695334 /* TVC.swift */; };
+		DFB92FCA2117BE9100695334 /* BookDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB92FC92117BE9100695334 /* BookDetail.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		DFB92FBF2117B03C00695334 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DFB92FC12117B03C00695334 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DFB92FC72117B39000695334 /* TVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVC.swift; sourceTree = "<group>"; };
+		DFB92FC92117BE9100695334 /* BookDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetail.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				DFB92FC12117B03C00695334 /* Info.plist */,
 				DFB92FB22117B03A00695334 /* CourseraOpenLibrarySearchTableView.xcdatamodeld */,
 				DFB92FC72117B39000695334 /* TVC.swift */,
+				DFB92FC92117BE9100695334 /* BookDetail.swift */,
 			);
 			path = CourseraOpenLibrarySearchTableView;
 			sourceTree = "<group>";
@@ -139,6 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DFB92FB12117B03A00695334 /* AppDelegate.swift in Sources */,
+				DFB92FCA2117BE9100695334 /* BookDetail.swift in Sources */,
 				DFB92FC82117B39000695334 /* TVC.swift in Sources */,
 				DFB92FB42117B03A00695334 /* CourseraOpenLibrarySearchTableView.xcdatamodeld in Sources */,
 			);
