@@ -9,9 +9,27 @@
 import UIKit
 
 class TVC: UITableViewController {
+    
+    struct Book {
+        let name: String
+        let authors: String
+        let cover: UIImage?
+        
+        init(name: String, authors: String, cover: UIImage?) {
+            self.name = name
+            self.authors = authors
+            self.cover = cover
+        }
+    }
+    
+    var books = Array<Book>()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.books.append(Book(name: "Ricardo", authors: "Tercero Solis", cover: nil))
+        self.books.append(Book(name: "Eduardo", authors: "Tercero Solis", cover: nil))
+        self.books.append(Book(name: "Carlos", authors: "Tercero Solis", cover: nil))
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -28,24 +46,22 @@ class TVC: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        return self.books.count
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "BookCell", for: indexPath)
 
         // Configure the cell...
-
+        cell.textLabel?.text = self.books[indexPath.row].name
         return cell
     }
-    */
+ 
 
     /*
     // Override to support conditional editing of the table view.
