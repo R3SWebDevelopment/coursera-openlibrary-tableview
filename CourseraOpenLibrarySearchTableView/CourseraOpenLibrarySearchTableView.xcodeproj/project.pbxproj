@@ -9,23 +9,21 @@
 /* Begin PBXBuildFile section */
 		DFB92FB12117B03A00695334 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB92FB02117B03A00695334 /* AppDelegate.swift */; };
 		DFB92FB42117B03A00695334 /* CourseraOpenLibrarySearchTableView.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DFB92FB22117B03A00695334 /* CourseraOpenLibrarySearchTableView.xcdatamodeld */; };
-		DFB92FB62117B03A00695334 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB92FB52117B03A00695334 /* MasterViewController.swift */; };
-		DFB92FB82117B03A00695334 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB92FB72117B03A00695334 /* DetailViewController.swift */; };
 		DFB92FBB2117B03A00695334 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFB92FB92117B03A00695334 /* Main.storyboard */; };
 		DFB92FBD2117B03C00695334 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFB92FBC2117B03C00695334 /* Assets.xcassets */; };
 		DFB92FC02117B03C00695334 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFB92FBE2117B03C00695334 /* LaunchScreen.storyboard */; };
+		DFB92FC82117B39000695334 /* TVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB92FC72117B39000695334 /* TVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		DFB92FAD2117B03A00695334 /* CourseraOpenLibrarySearchTableView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CourseraOpenLibrarySearchTableView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFB92FB02117B03A00695334 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DFB92FB32117B03A00695334 /* CourseraOpenLibrarySearchTableView.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CourseraOpenLibrarySearchTableView.xcdatamodel; sourceTree = "<group>"; };
-		DFB92FB52117B03A00695334 /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
-		DFB92FB72117B03A00695334 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		DFB92FBA2117B03A00695334 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DFB92FBC2117B03C00695334 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DFB92FBF2117B03C00695334 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DFB92FC12117B03C00695334 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DFB92FC72117B39000695334 /* TVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,13 +57,12 @@
 			isa = PBXGroup;
 			children = (
 				DFB92FB02117B03A00695334 /* AppDelegate.swift */,
-				DFB92FB52117B03A00695334 /* MasterViewController.swift */,
-				DFB92FB72117B03A00695334 /* DetailViewController.swift */,
 				DFB92FB92117B03A00695334 /* Main.storyboard */,
 				DFB92FBC2117B03C00695334 /* Assets.xcassets */,
 				DFB92FBE2117B03C00695334 /* LaunchScreen.storyboard */,
 				DFB92FC12117B03C00695334 /* Info.plist */,
 				DFB92FB22117B03A00695334 /* CourseraOpenLibrarySearchTableView.xcdatamodeld */,
+				DFB92FC72117B39000695334 /* TVC.swift */,
 			);
 			path = CourseraOpenLibrarySearchTableView;
 			sourceTree = "<group>";
@@ -142,9 +139,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				DFB92FB12117B03A00695334 /* AppDelegate.swift in Sources */,
+				DFB92FC82117B39000695334 /* TVC.swift in Sources */,
 				DFB92FB42117B03A00695334 /* CourseraOpenLibrarySearchTableView.xcdatamodeld in Sources */,
-				DFB92FB62117B03A00695334 /* MasterViewController.swift in Sources */,
-				DFB92FB82117B03A00695334 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
