@@ -108,6 +108,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="04R-Fo-m9m"/>
                     </view>
+                    <connections>
+                        <outlet property="authors" destination="tQB-HR-3Ev" id="Czv-Sg-tBP"/>
+                        <outlet property="cover" destination="ut2-qb-7dm" id="CMe-3V-dzZ"/>
+                        <outlet property="name" destination="Acz-Ht-yu4" id="lVh-OT-aUx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7dN-e3-mE0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

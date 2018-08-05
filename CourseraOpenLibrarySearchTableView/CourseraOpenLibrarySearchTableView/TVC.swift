@@ -98,14 +98,18 @@ class TVC: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        let bookDetail = segue.destination as! BookDetail
+        let ip = self.tableView.indexPathsForSelectedRows!
+        let book = self.books[ip[0][1]]
+        bookDetail.setDetail(name: book.name, authors: book.authors, cover: book.cover)
     }
-    */
+    
 
 }
