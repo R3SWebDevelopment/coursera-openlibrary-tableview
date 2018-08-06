@@ -26,16 +26,17 @@ class TVC: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.books.append(Book(name: "Ricardo", authors: "Tercero Solis", cover: nil))
-        self.books.append(Book(name: "Eduardo", authors: "Tercero Solis", cover: nil))
-        self.books.append(Book(name: "Carlos", authors: "Tercero Solis", cover: nil))
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+    }
+    
+    func addBook(name: String, authors: String, cover: UIImage?){
+        self.books.append(Book(name: name, authors: authors, cover: cover))
+        self.tableView.reloadData()
     }
 
     override func didReceiveMemoryWarning() {
@@ -105,10 +106,16 @@ class TVC: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
-        let bookDetail = segue.destination as! BookDetail
-        let ip = self.tableView.indexPathsForSelectedRows!
-        let book = self.books[ip[0][1]]
-        bookDetail.setDetail(name: book.name, authors: book.authors, cover: book.cover)
+        
+        if segue.identifier == "bookDetail" {
+            let bookDetail = segue.destination as! BookDetail
+            let ip = self.tableView.indexPathsForSelectedRows!
+            let book = self.books[ip[0][1]]
+            bookDetail.setDetail(name: book.name, authors: book.authors, cover: book.cover)
+        } else if segue.identifier == "bookSearch" {
+            let bookSearch = segue.destination as! BookSearch
+            bookSearch.parentView = self
+        }
     }
     
 
